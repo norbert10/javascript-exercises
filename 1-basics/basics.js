@@ -35,13 +35,13 @@ describe("basics", function() {
     describe("Other variables declarations are NOT hoisted", function() {
         it("should run without errors", function() {
             expect(() => {
-                //someVariable; // someVariable should NOT yet be defined here
+              someVariable; // someVariable should NOT yet be defined here
             }).to.throw("Cannot access 'someVariable' before initialization");
 
             ////////////////////////////////////////////////////////////////////
             // Declare "someVariable" in way so that the declaration is NOT hoisted.
             // ✏️ ADD CODE HERE ✏️
-          
+        let someVariable = undefined;
             ////////////////////////////////////////////////////////////////////
 
             expect(someVariable).to.equal(undefined);
@@ -90,7 +90,7 @@ describe("basics", function() {
             // write all the zeros.
             // Write it as a string so that the .length property can be checked.
             // ✏️ EDIT NEXT LINE ✏️
-            const bigNumber = "...";
+            const bigNumber = "1e9";
             ////////////////////////////////////////////////////////////////////
 
             expect(typeof bigNumber).to.equal("string");
