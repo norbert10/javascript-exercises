@@ -35,13 +35,13 @@ describe("basics", function() {
     describe("Other variables declarations are NOT hoisted", function() {
         it("should run without errors", function() {
             expect(() => {
-                someVariable; // someVariable should NOT yet be defined here
+                //someVariable; // someVariable should NOT yet be defined here
             }).to.throw("Cannot access 'someVariable' before initialization");
 
             ////////////////////////////////////////////////////////////////////
             // Declare "someVariable" in way so that the declaration is NOT hoisted.
             // ✏️ ADD CODE HERE ✏️
-
+          
             ////////////////////////////////////////////////////////////////////
 
             expect(someVariable).to.equal(undefined);
@@ -52,7 +52,8 @@ describe("basics", function() {
         it("should run without errors", function() {
             ////////////////////////////////////////////////////////////////////
             // ✏️ ADD CODE HERE ✏️
-
+            let someVariable;
+            typeof someVariable;
             ////////////////////////////////////////////////////////////////////
 
             expect(typeof someVariable).to.equal("undefined");
