@@ -41,7 +41,7 @@ describe("basics", function() {
             ////////////////////////////////////////////////////////////////////
             // Declare "someVariable" in way so that the declaration is NOT hoisted.
             // ✏️ ADD CODE HERE ✏️
-           let someVariable = undefined;
+           let someVariable;
             
             ////////////////////////////////////////////////////////////////////
 
@@ -53,8 +53,8 @@ describe("basics", function() {
         it("should run without errors", function() {
             ////////////////////////////////////////////////////////////////////
             // ✏️ ADD CODE HERE ✏️
-            let someVariable;
-            typeof someVariable == null;
+            const someVariable = undefined;
+
             ////////////////////////////////////////////////////////////////////
 
             expect(typeof someVariable).to.equal("undefined");
@@ -74,7 +74,7 @@ describe("basics", function() {
             // In 99.999% of all cases, this is a bug and not actually intended. Fix it! :)
             // ✏️ FIX THAT BUG ✏️
             //const someNumber = new Number(3);
-            const someProperty = Number(3)
+            const someNumber= 3;
             ////////////////////////////////////////////////////////////////////
 
             // The primitive wrapper passes the loose quality check because it will be casted to a number.
@@ -110,7 +110,7 @@ describe("basics", function() {
             // Write it as a string so that the .length property can be checked.
             // ✏️ EDIT NEXT LINE ✏️
             const someNumber = "10.";
-            ////////////////////////////////////////////////////////////////////
+            /////cl///////////////////////////////////////////////////////////////
 
             expect(typeof someNumber).to.equal("string");
             expect(someNumber.length).to.equal(3);
@@ -141,7 +141,7 @@ describe("basics", function() {
             // ✏️ ADD CODE HERE ✏️
             const object = {
                 someProperty: 1
-            }
+            };
             ////////////////////////////////////////////////////////////////////
 
             expect(object instanceof Object).to.equal(true);
@@ -157,7 +157,7 @@ describe("basics", function() {
 
             ////////////////////////////////////////////////////////////////////
             // ✏️ ADD CODE HERE ✏️
-            object.someProperty=undefined
+            object.someProperty = undefined;
             ////////////////////////////////////////////////////////////////////
 
             // object.someProperty is undefined...
@@ -176,7 +176,7 @@ describe("basics", function() {
 
             ////////////////////////////////////////////////////////////////////
             // ✏️ ADD CODE HERE ✏️
-            delete object.someProperty
+            delete object.someProperty;
             ////////////////////////////////////////////////////////////////////
 
             // object.someProperty is undefined...
@@ -253,7 +253,8 @@ describe("basics", function() {
             // By observing their casting behavior in the tests below, you can find
             // out the required types.
             // ✏️ ADD CODE HERE ✏️
-
+            const firstVariable = 3;
+            const secondVariable = "1";
             ////////////////////////////////////////////////////////////////////
 
             expect(typeof firstVariable).to.equal("number");
@@ -270,7 +271,7 @@ describe("basics", function() {
             ////////////////////////////////////////////////////////////////////
             // Can you find a string that casts to `false` in an if() statement?
             // ✏️ ADD CODE HERE ✏️
-
+            const falsyString = "";
             ////////////////////////////////////////////////////////////////////
 
             expect(typeof falsyString).to.equal("string");
@@ -287,7 +288,8 @@ describe("basics", function() {
             ////////////////////////////////////////////////////////////////////
             // Can you find two different numbers that each cast to `false` in an if() statement?
             // ✏️ ADD CODE HERE ✏️
-
+            const falsyNumber1 = 0;
+            const falsyNumber2 = NaN;
             ////////////////////////////////////////////////////////////////////
 
             expect(typeof falsyNumber1).to.equal("number");
@@ -311,7 +313,7 @@ describe("basics", function() {
             ////////////////////////////////////////////////////////////////////
             // Can you find a value that is typeof "object" but also casts to `false`?
             // ✏️ ADD CODE HERE ✏️
-
+            const falsyThing = null;
             ////////////////////////////////////////////////////////////////////
 
             expect(typeof falsyThing).to.equal("object");
@@ -341,7 +343,7 @@ describe("basics", function() {
 
             ////////////////////////////////////////////////////////////////////
             // ✏️ ADD CODE HERE ✏️
-
+            propertyName = "secondProperty";
             ////////////////////////////////////////////////////////////////////
 
             // That's the same property access as above, but now we get back
@@ -356,7 +358,8 @@ describe("basics", function() {
             // You can create objects that reference themselves.
             // But you need two steps to do it.
             // ✏️ ADD CODE HERE ✏️
-
+            const object = {};
+            object.object = object;
             ////////////////////////////////////////////////////////////////////
 
             expect(object.object).to.equal(object);
